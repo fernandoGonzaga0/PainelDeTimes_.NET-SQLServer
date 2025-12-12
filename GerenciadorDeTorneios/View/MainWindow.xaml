@@ -1,0 +1,56 @@
+﻿<Window x:Class="GerenciadorDeTorneios.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GerenciadorDeTorneios"
+        xmlns:vm="clr-namespace:GerenciadorDeTorneios.ViewModel"
+        xmlns:models="clr-namespace:GerenciadorDeTorneios.Models"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800"
+        d:DataContext="{d:DesignInstance Type=vm:MainWindowViewModel}">
+
+    <Window.Resources>
+
+        <!-- criando times fake para a exibição em tempo de design -->
+        <x:Array x:Key="FakeTimes" Type="{x:Type models:Time}">
+            <models:Time Nome="Corinthians"/>
+            <models:Time Nome="São Paulo"/>
+            <models:Time Nome="Santos"/>
+        </x:Array>
+
+    </Window.Resources>
+
+    <!-- lista de times -->
+    <ListBox ItemsSource="{Binding Times}"
+             d:ItemsSource="{StaticResource FakeTimes}"
+             ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+
+        <!--alterando a formatação de linha por coluna-->
+        <ListBox.ItemsPanel>
+            <ItemsPanelTemplate>
+                <WrapPanel Orientation="Horizontal"
+               ItemHeight="Auto"
+               ItemWidth="220"/>
+            </ItemsPanelTemplate>
+        </ListBox.ItemsPanel>
+
+        <ListBox.ItemTemplate>
+
+            <DataTemplate>
+
+                <!-- item para cada time -->
+                <StackPanel Margin="5" Background="#EEE" Orientation="Horizontal">
+
+                    <!--Nome do time -->
+                    <TextBlock Text="{Binding Nome}" FontSize="16"/>
+
+                </StackPanel>
+
+            </DataTemplate>
+
+        </ListBox.ItemTemplate>
+
+    </ListBox>
+
+</Window>

@@ -44,6 +44,7 @@
 
                     <!--Nome do time -->
                     <TextBlock Text="{Binding Nome}" FontSize="16"/>
+                    <TextBlock Text="{Binding Id}" FontSize="10" VerticalAlignment="Center"/>
 
                 </StackPanel>
 

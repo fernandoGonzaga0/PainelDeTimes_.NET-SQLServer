@@ -42,5 +42,39 @@ GerenciadorDeTorneios/
 
 <p>No banco de dados existem apenas duas tabelas: Time e Jogadores, relacionadas em 1:N (um time pode ter vários jogadores). Essas tabelas são conectadas por uma chave estrangeira, onde Jogadores.TimeId referencia Time.Id:</p>
 
-<img src="GerenciadorDeTorneios/Resources/SQL_printscreen.png" alt="SQL_printscreen" width="800" heigth="600">
-  
+<img src="GerenciadorDeTorneios/Resources/SQL_diagrama.png" alt="SQL_printscreen" width="800" heigth="600">
+
+### Conexão com Banco de Dados
+
+<p>A configuração de conexão está no App.config, onde criei um tipo connectionStrings, adicionando as seguintes informações:</p>
+
+  - name -> nome do banco de dados no projeto 
+  - connectionString -> contendo o nome do Servidor do banco de dados, o nome do banco no SQL Server e Trusted_Connection = True, permitindo a conexão sem certificado SSL
+  - providerName -> System.Data.SqlClient (específico para banco de dados SQL Server em C#)
+
+### Padrão Repository
+
+<p>Cada entidade possui um repositório no projeto (pasta /Data) responsável por abrir/fechar conexões, executar comandos SQL e mapear resultados para objetos em C#.</p>
+
+## MVVM (Model-View-ViewModel)
+
+<p>Model</p>
+
+  - Time.cs e Jogadores.cs: classes com propriedades
+  - Representam as entidades do banco de dados
+
+<p>ViewModel</p>
+
+  - MainWindowViewModel.cs: centraliza a lógica de apresentação
+  - Implementa INotifyPropertyChanged para notificar mudanças à View
+  - Gerencia ObservableCollection<T> para binding automático
+  - Coordena a comunicação entre View e Repositórios
+
+<p>View</p>
+
+  - MainWindow.xaml: interface gráfica com XAML
+  - Utiliza Data Binding para conectar-se ao ViewModel
+  - Template dos dados para exibir times e jogadores
+
+
+  <img src>

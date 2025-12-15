@@ -7,7 +7,7 @@
         xmlns:vm="clr-namespace:GerenciadorDeTorneios.ViewModel"
         xmlns:models="clr-namespace:GerenciadorDeTorneios.Models"
         mc:Ignorable="d"
-        Title="Painel de Times" Height="660" Width="800"
+        Title="Painel de Times" Height="560" Width="800"
         d:DataContext="{d:DesignInstance Type=vm:MainWindowViewModel}">
     
     <!--
@@ -77,7 +77,7 @@
 
                     <!-- item para cada time -->
 
-                    <Border Padding="5" Background="Azure" CornerRadius="20" Height="270">
+                    <Border Padding="5" Background="Azure" CornerRadius="20" Height="180" Width="200">
                         <Grid>
 
                             <Grid.RowDefinitions>
@@ -97,15 +97,13 @@
                                        Foreground="#000000"
                                        HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
+                            <!--Texto ELENCO-->
                             <TextBlock Grid.Row="1" Text="Elenco"/>
 
+                            <!--Nome e posições dos jogadores-->
                             <Grid Grid.Row="2">
 
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition/>
-                                    <ColumnDefinition/>
-                                </Grid.ColumnDefinitions>
-
+                                
                                 <!--Nome dos jogadores-->
                                 <ItemsControl Grid.Row="2" ItemsSource="{Binding Jogadores}">
 

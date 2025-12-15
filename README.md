@@ -76,5 +76,16 @@ GerenciadorDeTorneios/
   - Utiliza Data Binding para conectar-se ao ViewModel
   - Template dos dados para exibir times e jogadores
 
+<img src="GerenciadorDeTorneios/Resources/App_printscreen.png" width="800" heigth="800">
 
-  <img src>
+## Como Executar
+
+  - Execute os scripts SQL para criar o banco de dados em /Scripts/SQL_createTables.sql
+  - Clone o repositório de forma local
+  - Configure a connection string no App.config (caso não exista, clique com o botão direito na solution e adicione o tipo de arquivo App.Config)
+  - Verifique o nome do banco de dados em App.Config e nos repositórios
+  - Compile e execute a aplicação WPF
+
+<hr>
+
+<p>Desenvolvido por Fernando Gonzaga</p>

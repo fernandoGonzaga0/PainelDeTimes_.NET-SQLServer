@@ -1,5 +1,11 @@
 # Painel de Times usando C# e SQL Server
 
+[![.NET](https://img.shields.io/badge/.NET-9.0-512BD4?style=flat&logo=dotnet)](https://dotnet.microsoft.com/)
+[![C#](https://img.shields.io/badge/C%23-12.0-239120?style=flat&logo=csharp)](https://learn.microsoft.com/dotnet/csharp/)
+[![WPF](https://img.shields.io/badge/WPF-Windows_Desktop-0078D4?style=flat&logo=windows)](https://learn.microsoft.com/dotnet/desktop/wpf/)
+[![SQL Server](https://img.shields.io/badge/SQL_Server-CC2927?style=flat&logo=microsoftsqlserver&logoColor=white)](https://www.microsoft.com/sql-server)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
 <h4>Aplicação WPF usando C# que se conecta de forma assíncrona com um banco de dados SQL.</h4>
 
 <p>Esse projeto é um exemplo que utilizei para entender melhor como trazer dados de um banco de dados para uma aplicação real em dispositivos Windows. Para estruturação do projeto, usei MVVM (Model-View-ViewModel).</p>
@@ -95,4 +101,13 @@ GerenciadorDeTorneios/
 
 <hr>
 
-<p>Desenvolvido por Fernando Gonzaga</p>
+## Licença
+
+<p>Distribuído sob licença MIT. Veja LICENSE para mais informações.</p>   
+
+## Autor
+
+<p>Desenvolvido por Fernando Gonzaga:</p>
+
+  - Linkedln: https://www.linkedin.com/in/fernando-gonzaga21/
+  - GitHub: https://github.com/fernandoGonzaga0

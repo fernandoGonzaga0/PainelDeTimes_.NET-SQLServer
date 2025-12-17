@@ -2,8 +2,6 @@
 
 <h4>Aplicação WPF usando C# que se conecta de forma assíncrona com um banco de dados SQL.</h4>
 
-<hr>
-
 <p>Esse projeto é um exemplo que utilizei para entender melhor como trazer dados de um banco de dados para uma aplicação real em dispositivos Windows. Para estruturação do projeto, usei MVVM (Model-View-ViewModel).</p>
 
 <img src="GerenciadorDeTorneios/Resources/App_printscreen.png" width="650" heigth="600">

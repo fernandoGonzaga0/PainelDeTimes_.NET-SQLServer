@@ -6,14 +6,25 @@
 
 <p>Esse projeto é um exemplo que utilizei para entender melhor como trazer dados de um banco de dados para uma aplicação real em dispositivos Windows. Para estruturação do projeto, usei MVVM (Model-View-ViewModel).</p>
 
+<img src="GerenciadorDeTorneios/Resources/App_printscreen.png" width="650" heigth="600">
+
 ## Objetivo do projeto
 
-<p>Demonstrar como:</p>
+<p>Fazer com que fosse possível uma aplicação receber dados atualizados de um banco de dados SQL Server. Com a conexão ativa, qualquer INSERT adicionaria dados explícitos na aplicação de forma automática, sem a necessidade de configurar a exibição individual de elementos no WPF. Com duas tabelas, estou levando dados de times e jogadores de cada um desses times. Outros objetivos que posso listar são:</p>
 
   - Conectar uma aplicação WPF a um banco de dados SQL Server
   - Implementar o padrão MVVM em um projeto real
   - Trabalhar com a abordagem Database First
   - Exibir dados relacionais (Times -> Jogadores) em interface gráfica
+
+## Tecnologias Utilizadas
+
+<p>Para criar essa aplicação, utilizei as seguintes ferramentas:</p>
+
+  - Visual Studio
+  - .NET 9.0
+  - C# 12.0
+  - SQL Server Management (criei um banco de dados local para o projeto)
 
 ## Arquitetura do Projeto
 
@@ -46,7 +57,7 @@ GerenciadorDeTorneios/
 
 ### Conexão com Banco de Dados
 
-<p>A configuração de conexão está no App.config, onde criei um tipo connectionStrings, adicionando as seguintes informações:</p>
+<p>A configuração de conexão do banco de dados na aplicação está no arquivo raiz do projeto App.config, onde criei um tipo connectionStrings, adicionando as seguintes informações (para testes locais, insira as informações do seu banco de dados em connectionString):</p>
 
   - name -> nome do banco de dados no projeto 
   - connectionString -> contendo o nome do Servidor do banco de dados, o nome do banco no SQL Server e Trusted_Connection = True, permitindo a conexão sem certificado SSL
@@ -75,8 +86,6 @@ GerenciadorDeTorneios/
   - MainWindow.xaml: interface gráfica com XAML
   - Utiliza Data Binding para conectar-se ao ViewModel
   - Template dos dados para exibir times e jogadores
-
-<img src="GerenciadorDeTorneios/Resources/App_printscreen.png" width="800" heigth="800">
 
 ## Como Executar
 
